@@ -1,89 +1,95 @@
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
-
-body{
+*{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background: url(https://media.istockphoto.com/id/983890004/photo/stock-market-chart-stock-market-data-in-blue-on-led-display-concept-with-city-scape-singapore.jpg?s=612x612&w=0&k=20&c=BnIAWIdOOnpNlxdQ7dhrCkgNS7ZF09AgVdUTVm1hFGI=);
-    background-size: cover;
-    opacity: 1;
-    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
 }
-
-.box{
-    width: 400px;
-    padding: 40px;
+ .background{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    color: white;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 30px;
-    box-shadow: 0 0 30px green;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(grid2.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+ }
+ .mar{
+    margin-top: 20px;
+    font-size: 20px;
+ }
+.header{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
-
-.box h1{
-    color: white;
-    font-family: "Times New Roman";
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 500;
+.logo{
+    height: 50px;
+    width: 50px;
+    padding-top: 20px;
+    padding-left: 30px;
 }
-
-.box input[type = "text"], .box input[type = "password"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 10px;
+.logos{
+    height: 25px;
     width: 200px;
-    outline: none;
+    background-image: url(logo.png); 
+    background-size:contain;
+}
+.navbar a{
+    font-size: 25px;
+    margin: 50px;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+    text-decoration: none;
 }
-
-.box input[type = "text"]:focus, .box input[type = "password"]:focus{
-    width: 280px;
-    border-color: #2ecc71;
+.navbar a:hover{
+    color: green;
 }
-
-.box input[type = "submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 10rem;
+}
+.about-text{
+    padding-top: 10rem;
+    width: 500px;
+}
+.about-text h1{
+    font-size: 100px;
+    font-weight: 600;
+}
+font{
+    color: green;
+}
+.about-text h3{
+    font-size: 30px;
+    font-weight: 600;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
+    line-height: 0.5rem;
+    margin: 15px 0px 30px;
 }
-
-.box input[type = "submit"]:hover{
-    background: #2ecc71;
+.about-text p{
+    color: white;
+    font-size: 30px;
+    line-height: 1.5rem;
+    /* font-weight: 600; */
 }
-
-.box p{
-    color: grey;
-    font-family: arial,sans-serif;
-    font-size: 13px;
+.photo{
+    padding-top: 7rem;
+    padding-right: 10rem;
+    height: 500px;
+    width: 50%;
 }
-
-
-.box p:hover{
-    text-decoration: underline;
-    cursor: pointer;
+#pic{
+    height: 500px;
+    width: 700px;
+    filter: drop-shadow(20px 7px 20px black);
 }
