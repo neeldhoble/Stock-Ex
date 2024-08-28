@@ -4,7 +4,11 @@
     box-sizing: border-box;
     color: white;
 }
- .background{
+body{
+    height: 100%;
+    width: 100%;
+}
+ /* .background{
     position: absolute;
     top: 0;
     left: 0;
@@ -15,6 +19,19 @@
     background-size: cover;
     z-index: -1;
     filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+ } */
+ video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    filter:blur(5px);
  }
  .mar{
     margin-top: 20px;
@@ -51,45 +68,86 @@
 .navbar a:hover{
     color: green;
 }
-.about{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.heading{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 1.5rem;
-    padding-left: 10rem;
+    gap: 2rem;
+    padding-left: 5rem;
+    position: relative;
 }
-.about-text{
-    padding-top: 10rem;
-    width: 500px;
+.heading1{
+    padding-top: 2rem;
+    width: 100%;
+    /* margin-left: 20px; */
 }
-.about-text h1{
+.heading1 h1{
     font-size: 100px;
     font-weight: 600;
+}
+.heading1 h3{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    /* line-height: 0.5rem; */
+    margin: 15px 0px 30px;
 }
 font{
     color: green;
 }
-.about-text h3{
-    font-size: 30px;
-    font-weight: 600;
-    color: white;
-    line-height: 0.5rem;
-    margin: 15px 0px 30px;
-}
-.about-text p{
-    color: white;
-    font-size: 30px;
-    line-height: 1.5rem;
-    /* font-weight: 600; */
-}
 .photo{
     padding-top: 7rem;
-    padding-right: 10rem;
-    height: 500px;
+    padding-right: 5rem;
+    height: 600px;
     width: 50%;
 }
 #pic{
-    height: 500px;
-    width: 700px;
-    filter: drop-shadow(20px 7px 20px black);
+    margin-top: 70px;
+    height: 300px;
+    width: 600px;
+    filter: drop-shadow(20px 7px 20px #000);
+}
+
+#about{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#about-text{
+    width: 70%;
+    /* background-color: black;
+    border: 2px solid green;
+    border-radius: 10px; */
+}
+#about-text h1{
+    font-size: 70px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#about-text p{
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-weight: 900;
+}
+#btn{
+    height: 50px;
+    width: 120px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 0 20px green;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+#btn:hover{
+    background-color: black;
+    box-shadow: 0 0 30px green,0 0 50px green;
 }
